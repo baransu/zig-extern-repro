@@ -17,6 +17,7 @@ pub fn build(b: *std.build.Builder) void {
     exe.install();
 
     exe.addIncludePath(thisDir() ++ "/src");
+    exe.addCSourceFile(thisDir() ++ "/src/example.c", &.{});
 
     const run_cmd = exe.run();
     run_cmd.step.dependOn(b.getInstallStep());

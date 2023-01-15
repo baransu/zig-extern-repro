@@ -4,3 +4,5 @@ struct A {
 };
 
 extern A a;
+
+void hello_world();
